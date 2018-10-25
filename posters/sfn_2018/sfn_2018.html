@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128110042-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'UA-128110042-1');
+      </script>
+      <title>SFN 2018 - Appukuttan et al.</title>
+      <meta name="viewport" content="width = device-width, initial-scale = 1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <link rel="stylesheet" type="text/css" href="../static/css/live_paper.css">
+      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+   </head>
+   <body class="container">
+      <br>
+      <div class="box rounded">
+         <h5 style="font-family: 'Merriweather', serif; text-align:center; line-height: 1.25;">Systematic Statistical Validation of Data-Driven Models In Neuroscience</h5>
+      </div>
+      <div>
+         <p><strong>Authors: </strong>Shailesh Appukuttan<sup>1</sup>, Pedro Garcia-Rodriguez<sup>1</sup>, Lungsi Sharma<sup>1</sup>, Sára Sáray<sup>2</sup>, Szabolcs Káli<sup>2</sup>, and Andrew Davison<sup>1</sup></p>
+         <p><strong>Author information: </strong>
+            <br><sup>1 </sup>Unité de Neurosciences, Information et Complexité, Centre Nationale de la Recherche Scientifique, Gif-sur-Yvette, France,
+            <br><sup>2 </sup>Institute of Experimental Medicine, Hungarian Academy of Sciences, Budapest, Hungary
+         </p>
+         <p><strong>Email: </strong>Shailesh Appukuttan ( <em><a href="mailto:shailesh.appukuttan@unic.cnrs-gif.fr">shailesh.appukuttan@unic.cnrs-gif.fr</a></em> )</p>
+      </div>
+      <div class="rainbow-row">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <div class="note rounded">
+         <h5>Abstract:</h5>
+         The expansion of knowledge in neuroscience has resulted in a myriad of models to represent the multi-level complexity of the brain, from the subcellular scale, through multi-compartment neurons, microcircuits to network level models. An essential element of scientific modeling is validation of the model with respect to experimental data. Until recently this has most often been done in an ad hoc way, with most studies reporting only qualitative comparisons between simulation results and experimental findings, and different modeling studies using different datasets for validation, which makes comparison of models difficult.
+         <br><br>
+         Inspired by quality control methods from software engineering, SciUnit (Omar, Aldrich & Gerkin, ICSE 2014) is an attempt to remedy these problems by providing a software framework for quantitative validation testing that explicitly supports applying a given validation test to different models. By defining interfaces to which models must adhere, tests can be model agnostic and used to validate any compatible model despite differences in their internal structures, the language used and/or the simulator employed. Building on the SciUnit framework, we have developed suites of validation tests for biophysically and morphologically detailed neuron models, and for circuit models of different brain regions. HippoUnit, CerebUnit and BasalUnit are validation suites catering toneuron activity models of hippocampus, cerebellum and basal ganglia, while MorphoUnit targets testing of neuronal reconstructions and network structures. Each test is implemented as a class in the Python language, and comprises a specification of the required model capabilities, the location of the reference dataset, and data analysis code to transform the variables recorded from simulations (such as membrane potential, action potentials) into a format (for example a histogram) that allows the simulation results to be directly compared to the experimental data through a statistical test.
+         <br><br>
+         We have further developed a web services framework to support the management of models, tests, and validation results. It is accessible via web apps within the Human Brain Project Collaboratory and through a Python client. The framework enables tracking the evolution of models over time, as well as comparison against other models in the domain. This work was performed as part of the Human Brain Project (HBP), in collaboration with colleagues modeling the brain regions mentioned above.
+      </div>
+      <h5>Useful Links</h5>
+      <p>Online resources related to the poster are indicated below:
+      </p>
+      <ul class="collapsible" data-collapsible="expandable">
+         <li>
+            <div class="collapsible-header amber lighten-5">
+               <i class="material-icons">check_box</i>Vaidation Framework
+            </div>
+            <div class="collapsible-body">
+               <div style="margin-left:25px">
+                  <br>
+                  <b>Validation framework related resources</b>
+                  <table class="highlight">
+                     <tbody>
+                        <tr>
+                           <td style="width:35%">HBP Validation Python Client - GitHub</td>
+                           <td style="width:65%"><a href="https://github.com/HumanBrainProject/hbp-validation-client">https://github.com/HumanBrainProject/hbp-validation-client</a></td>
+                        </tr>
+                        <tr>
+                           <td>HBP Validation Python Client - Documentation</td>
+                           <td><a href="http://hbp-validation-client.readthedocs.io">http://hbp-validation-client.readthedocs.io</a></td>
+                        </tr>
+                        <tr>
+                           <td>HBP Validation Framework Web Services - GitHub</td>
+                           <td><a href="https://github.com/HumanBrainProject/hbp-validation-framework">https://github.com/HumanBrainProject/hbp-validation-framework</a></td>
+                        </tr>
+                        <tr>
+                           <td>HBP Validation Framework REST API - Documentation</td>
+                           <td><a href="http://hbp-validation-framework-api.readthedocs.io">http://hbp-validation-framework-api.readthedocs.io</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <br>
+            </div>
+         </li>
+         <li>
+            <div class="collapsible-header amber lighten-5">
+               <i class="material-icons">dns</i>Test Suites
+            </div>
+            <div class="collapsible-body">
+               <div style="margin-left:25px">
+                  <br>
+                  <b>Test suites for specific brain regions</b>
+                  <table class="highlight">
+                     <tbody>
+                        <tr>
+                           <td style="width:20%">HippoUnit</td>
+                           <td style="width:80%"><a href="https://github.com/KaliLab/hippounit">https://github.com/KaliLab/hippounit</a></td>
+                        </tr>
+                        <tr>
+                           <td>HippoNetworkUnit</td>
+                           <td><a href="https://github.com/pedroernesto/HippoNetworkUnit">https://github.com/pedroernesto/HippoNetworkUnit</a></td>
+                        </tr>
+                        <tr>
+                           <td>CerebUnit</td>
+                           <td><a href="https://github.com/lungsi/cerebellum-unit">https://github.com/lungsi/cerebellum-unit</a></td>
+                        </tr>
+                        <tr>
+                           <td>BasalUnit</td>
+                           <td><a href="https://github.com/appukuttan-shailesh/basalunit">https://github.com/appukuttan-shailesh/basalunit</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br>
+                  <b>Test suites for model features, independent of cell type or brain region</b>
+                  <table class="highlight">
+                     <tbody>
+                        <tr>
+                           <td style="width:20%">MorphoUnit</td>
+                           <td style="width:80%"><a href="https://github.com/appukuttan-shailesh/morphounit">https://github.com/appukuttan-shailesh/morphounit</a></td>
+                        </tr>
+                        <tr>
+                           <td>NetworkUnit</td>
+                           <td><a href="https://github.com/mvonpapen/simrest_validation">https://github.com/mvonpapen/simrest_validation</a></td>
+                        </tr>
+                        <tr>
+                           <td>eFELUnit</td>
+                           <td><a href="https://github.com/appukuttan-shailesh/eFELunit">https://github.com/appukuttan-shailesh/eFELunit</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <br>
+            </div>
+         </li>
+         <li>
+            <div class="collapsible-header amber lighten-5">
+               <i class="material-icons">tab</i>HBP Collaboratory
+            </div>
+            <div class="collapsible-body">
+               <div style="margin-left:25px">
+                  <br>
+                  <b>Validation resources on the HBP Collaboratory</b>
+                  <table class="highlight">
+                     <tbody>
+                        <tr>
+                           <td style="width:20%">Online Use Cases</td>
+                           <td style="width:80%"><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66858">https://collab.humanbrainproject.eu/#/collab/1655/nav/66858</a></td>
+                        </tr>
+                        <tr>
+                           <td>Model Validation Suites Collab</td>
+                           <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/61654">https://collab.humanbrainproject.eu/#/collab/8123/nav/61654</a></td>
+                        </tr>
+                        <tr>
+                           <td>Model Catalog App</td>
+                           <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/68489">https://collab.humanbrainproject.eu/#/collab/8123/nav/68489</a></td>
+                        </tr>
+                        <tr>
+                           <td>CerebUnit</td>
+                           <td><a href="https://collab.humanbrainproject.eu/#/collab/8123/nav/68490">https://collab.humanbrainproject.eu/#/collab/8123/nav/68490</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <br>
+            </div>
+         </li>
+      </ul>
+      <br>
+      <h5>References</h5>
+      <ul class="collection">
+         <li class="collection-item">Bianchi, D., Marasco, A., Limongiello, A., Marchetti, C., Marie, H., Tirozzi, B., & Migliore, M. (2012). On the mechanisms underlying the depolarization block in the spiking dynamics of CA1 pyramidal neurons. Journal of computational neuroscience, 33(2), 207-225.</li>
+         <li class="collection-item">Golding, N. L., Kath, W. L., & Spruston, N. (2001). Dichotomy of action-potential backpropagation in CA1 pyramidal neuron dendrites. Journal of neurophysiology, 86(6), 2998-3010.</li>
+         <li class="collection-item">Losonczy, A., & Magee, J. C. (2006). Integrative properties of radial oblique dendrites in hippocampal CA1 pyramidal neurons. Neuron, 50(2), 291-307. </li>
+         <li class="collection-item">Magee, J. C., & Cook, E. P. (2000). Somatic EPSP amplitude is independent of synapse location in hippocampal pyramidal neurons. Nature neuroscience, 3(9), 895.</li>
+         <li class="collection-item">Migliore, R., Lupascu, C. A., Bologna, L. L., Romani, A., Courcol, J. D., Antonel, S., ... & Migliore, M. (2018). The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven modeling workflow. PLoS computational biology, 14(9), e1006423.</li>
+         <li class="collection-item">Omar, C., Aldrich, J., & Gerkin, R. C. (2014, May). Collaborative infrastructure for test-driven scientific model validation. In Companion Proceedings of the 36th International Conference on Software Engineering (pp. 524-527). ACM.</li>
+      </ul>
+      <br>
+      <h5>Acknowledgement</h5>
+      <p>This work has received funding from the European Union’s Horizon 2020 Framework Programme for Research and Innovation under the Specific Grant Agreement No. 720270 (Human Brain Project SGA1) and under the Specific Grant Agreement No. 785907 (Human Brain Project SGA2).
+      </p>
+      <br>
+      <div class="rainbow-row">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+      <br>
+      <br>
+   </body>
+</html>
